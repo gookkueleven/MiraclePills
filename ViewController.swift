@@ -23,6 +23,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var zipCodeField: UITextField!
     
+    @IBOutlet weak var buyBtn: UIButton!
+    
+    @IBOutlet weak var successImg: UIImageView!
+    
     let states = ["BKK", "LA", "MHS", "CHA", "CHR", "PTT"]
     
     override func viewDidLoad() {
@@ -65,5 +69,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipCodeLabel.isHidden = false
         zipCodeField.isHidden = false
     }
+    
+    @IBAction func buyBtnPressed(_ sender: Any) {
+        for view in self.view.subviews{
+            view.isHidden = true
+        }
+        successImg.isHidden = false
+    }
+    
+    
+
 }
 
